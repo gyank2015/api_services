@@ -1,0 +1,6 @@
+export TEST_ENV=true
+export PROD_ENV=false
+export MONGODB_TEST_HOST="127.0.0.1"
+export MONGODB_TEST_PORT=27017
+export MONGODB_PROD_HOST="127.0.0.1"
+export MONGODB_PROD_PORT=27017

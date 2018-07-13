@@ -1,0 +1,11 @@
+django==2.0.2
+djangorestframework
+django-debug-toolbar
+djongo==1.2.29
+pymongo>=3.2.0
+markdown
+django-filter
+setuptools
+jsonfield>=2.0.2
+django-rest-swagger
+../avengers_django_models/avengers_django_models_package/dist/avengers_django_models_app-0.41.tar.gz
