@@ -1,0 +1,8 @@
+name: avengers
+channels:
+  - javascript
+dependencies:
+  - python==3.6
+  - pip
+  - pip:
+    -  virtualenv
