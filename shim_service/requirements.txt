@@ -1,0 +1,13 @@
+django==2.0.2
+djangorestframework
+django-debug-toolbar
+pymongo>=3.2.0
+djongo==1.2.29
+markdown
+django-filter
+setuptools
+Pillow
+jsonfield>=2.0.2
+django-rest-swagger==2.1.2
+../avengers_django_models/avengers_django_models_package/dist/avengers_django_models_app-0.41.tar.gz
+django-cors-headers
