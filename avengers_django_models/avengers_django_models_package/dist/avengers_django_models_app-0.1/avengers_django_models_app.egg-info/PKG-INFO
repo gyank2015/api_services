@@ -1,0 +1,43 @@
+Metadata-Version: 1.1
+Name: avengers-django-models-app
+Version: 0.1
+Summary: A simple Django app to conduct Web-based polls.
+Home-page: https://www.example.com/
+Author: Your Name
+Author-email: yourname@example.com
+License: BSD License
+Description: =====
+        Avengers_django_models_app
+        =====
+        
+        avengers_django_models_app is a Django app containing all the model definitions to be used by other avengers apps.
+        
+        Detailed documentation is in the "docs" directory.
+        
+        Quick start
+        -----------
+        
+        1. Add "avengers_django_models_app" to your INSTALLED_APPS setting like this::
+        
+            INSTALLED_APPS = [
+                ...
+                'avengers_django_models_app',
+            ]
+        
+        2. Include the avengers_django_models_app URLconf in your project urls.py like this::
+        
+            path('avengers_django_models_app/', include('avengers_django_models_app.urls')),
+        
+        3. Run `./manage.py migrate` to create the avengers_django_models_app models.
+Platform: UNKNOWN
+Classifier: Environment :: Web Environment
+Classifier: Framework :: Django
+Classifier: Framework :: Django :: X.Y
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Topic :: Internet :: WWW/HTTP
+Classifier: Topic :: Internet :: WWW/HTTP :: Dynamic Content

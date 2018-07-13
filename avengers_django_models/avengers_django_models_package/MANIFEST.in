@@ -1,0 +1,3 @@
+include LICENSE
+include README.rst
+recursive-include avengers_django_models_app/docs *
