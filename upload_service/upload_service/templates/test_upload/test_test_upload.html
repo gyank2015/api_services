@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+{% if user.is_authenticated %}
+<p>Hi {{ user.username }}
+<p><a href="{% url 'logout' %}">Log out</a></p>
+{% else %}
+<p><a href="{% url 'signup' %}">Sign Up</a></p>
+<p><a href="{% url 'login' %}">Log In </a></p>
+{% endif %}
+    <head>
+        <meta charset="utf-8">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <title>Test upload</title>
+    </head>
+    <body>
+        <img src="" height="200" alt="Image preview...">
+        <form id="myAwesomeForm" method="post" action="">
+            <input type="file" id="file" name="images" multiple/> <!-- Filename -->
+            <input type="submit" id="submitButton" name="submitButton" /> <!-- Submit -->
+        </form>
+        <script>
+
+            $("#myAwesomeForm").submit(function(e){
+                e.preventDefault();
+                appendFileAndSubmit();
+            });
+         
+            function appendFileAndSubmit(){
+                var form = document.getElementById("myAwesomeForm");
+                
+
+                var fd = new FormData(form);
+                console.log('fd',fd);
+                $.ajax({
+                    url:"/test/upload",
+                    headers: { 'Authorization': '{{Token}}' },
+                    data: fd,
+                    type:"POST",
+                    contentType:false,
+                    processData:false,
+                    cache:false,
+                    dataType:"json",
+                    error:function(err){
+                        console.error(err);
+                    },
+                    success:function(data){
+                        alert('Your images have been uploaded');
+                        window.location.reload(true);
+                    },
+                    complete:function(){
+                        console.log("Request finished.");
+                    }
+                });
+            }
+        </script>
+    </body>
+</html>
